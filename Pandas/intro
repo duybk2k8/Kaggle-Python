@@ -1,0 +1,11 @@
+Two core objects in pandas: Data Frame and Series
+
+1) Data Frame is a table 
+=> an array of individual entries, each of which has a certain value
+Each entry corresponds to a row (or record) and a column
+
+2) Series
+A sequence of data values
+
+Data frame: table (dict)
+Series : list
