@@ -20,8 +20,9 @@ pd.Series([30, 35, 40], index=['2015 Sales', '2016 Sales', '2017 Sales'], name='
 #series dont have column name, just have an overall name
 
 wine_reviews = pd.read_csv("../input/wine-reviews/winemag-data-130k-v2.csv")
-wine_reviews.shape #check how large
+wine_reviews.shape #check how large (row, column)
 wine_reviews.head() #view first five row
+#muốn specify x hàng preview (x)
 wine_reviews = pd.read_csv("../input/wine-reviews/winemag-data-130k-v2.csv", index_col=0)
 wine_reviews.head()
 #make pandas recognize and use that column for an index
