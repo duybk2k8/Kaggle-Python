@@ -44,6 +44,7 @@ countries_reviewed.sort_values(by='len')
 #sort by length => ascending (lowest)
 countries_reviewed.sort_values(by='len', ascending=False)
 #want descending => ascending = False
+#chỉ có by nếu nó là dataframe, còn series thì k cần
 
 countries_reviewed.sort_index()
 #sort by index (default order)
