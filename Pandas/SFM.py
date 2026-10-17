@@ -16,6 +16,7 @@ reviews.taster_name.value_counts() #see a list of unique values và how often th
 review_points_mean = reviews.points.mean()
 reviews.points.map(lambda p: p - review_points_mean)
 #nhận vào p, trả về p - mean
+#map chỉ áp dc vào 1 cột, apply áp dc all
 
 def center(p):
     return p - review_points_mean
@@ -36,13 +37,9 @@ reviews.apply(remean_points, axis='columns')
 #map and apply don't modify the original data they're called on
 
 #built-in function
-review_points_mean = reviews.points.mean()
+review_points_mean = reviews.points.mean() #median
 reviews.points - review_points_mean
 
 reviews.country + " - " + reviews.region_1
 #combining strings
 
-#create a variable xem title rượu nào có highest points to price ration
-bargain_idx = (reviews.points / reviews.price).idxmax()
-bargain_wine = reviews.loc[bargain_idx, 'title']
-#hàm built in idxmax => truy vấn ra title dựa theo idx đó
