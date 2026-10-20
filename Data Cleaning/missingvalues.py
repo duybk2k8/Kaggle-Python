@@ -16,7 +16,7 @@ nfl_data.head()
 
 # get the number of missing data points per column
 missing_values_count = nfl_data.isnull().sum()
-
+#.sum() nó chỉ check số lượng missing point ở từng column, phải thêm sum nữa
 # look at the # of missing points in the first ten columns
 missing_values_count[0:10]
 
@@ -56,3 +56,4 @@ subset_nfl_data.fillna(0)
 # then replace all the remaining na's with 0
 subset_nfl_data.fillna(method='bfill', axis = 0).fillna(0)
 #đi theo chiều dọc, lấy từ dòng bên dưới trong cùng một cột
+
